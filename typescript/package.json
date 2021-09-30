@@ -1,0 +1,82 @@
+{
+  "name": "sampe-code",
+  "version": "1.0.0",
+  "description": "sample code",
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "mocha --recursive --require ts-node/register \"test/**/*.ts\"",
+    "test-cov": "nyc npm t",
+    "build": "tsc --sourceMap false"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts",
+      "test/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ],
+    "sourceMap": true,
+    "all": true
+  },
+  "author": "mokuya18",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "4.1.7",
+    "@types/mocha": "5.2.7",
+    "@types/node": "^12.20.27",
+    "@types/sinon": "7.0.13",
+    "chai": "4.2.0",
+    "lambda-tester": "^3.6.0",
+    "mocha": "6.2.0",
+    "nyc": "14.1.1",
+    "sinon": "7.3.2",
+    "ts-mock-imports": "^1.2.6",
+    "ts-node": "8.5.4",
+    "typemoq": "2.1.0"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "8.10.31",
+    "@types/cookie": "^0.4.0",
+    "@types/express": "^4.17.8",
+    "@types/joi": "14.3.3",
+    "@types/moment": "^2.13.0",
+    "@types/parquetjs": "^0.10.2",
+    "@types/request-promise": "4.1.44",
+    "@types/socket.io-client": "^1.4.34",
+    "@types/uuid": "3.4.6",
+    "amazon-cognito-identity-js": "^4.4.0",
+    "aws-sdk": "^2.872.0",
+    "cookie": "^0.4.1",
+    "csv-parse": "^4.15.1",
+    "csv-stringify": "^5.5.1",
+    "csv-writer": "^1.6.0",
+    "dayjs": "^1.10.4",
+    "dyno-item-size": "^0.3.3",
+    "express": "^4.17.1",
+    "generate-password": "1.4.2",
+    "joi": "^14.3.1",
+    "keycloak-backend": "^2.0.0",
+    "localforage": "^1.9.0",
+    "moment": "^2.24.0",
+    "nodemailer": "6.3.1",
+    "parquetjs": "^0.11.2",
+    "request": "2.88.0",
+    "request-promise": "4.2.4",
+    "rxjs": "^6.6.3",
+    "socket.io-client": "^2.3.1",
+    "typescript": "3.7.2",
+    "uuid": "3.3.3"
+  }
+}
